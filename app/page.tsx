@@ -56,6 +56,40 @@ export default function Home() {
           </div>
         </a>
       </div>
+
+      {/* Footer */}
+      <footer className="mt-12 flex flex-wrap justify-center gap-6">
+        <a
+          href="https://drive.google.com/file/d/1NqXFFxI6A6RILIfCTbgfD_xkXrj8FLoH/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-red-950 hover:text-red-800 transition-colors duration-300"
+        >
+          Resume
+        </a>
+        <a
+          href="mailto:alexanderrossenright@gmail.com"
+          className="text-sm text-red-950 hover:text-red-800 transition-colors duration-300"
+        >
+          Contact
+        </a>
+        <a
+          href="https://drive.google.com/file/d/1c2f2yIazadNO9o5b6Cg632x3_rBTZOl9/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-red-950 hover:text-red-800 transition-colors duration-300"
+        >
+          Pipe Dream
+        </a>
+        <a
+          href="https://account.venmo.com/u/Alexander-Enright"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-red-950 hover:text-red-800 transition-colors duration-300"
+        >
+          Venmo
+        </a>
+      </footer>
     </main>
   );
 }
