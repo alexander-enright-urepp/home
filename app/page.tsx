@@ -6,7 +6,7 @@ export default function Home() {
         <img
           src="/ae-logo.png"
           alt="Alexander Enright Companies"
-          className="h-20 md:h-24 w-auto object-contain"
+          className="h-60 md:h-72 w-auto object-contain"
         />
       </div>
 
