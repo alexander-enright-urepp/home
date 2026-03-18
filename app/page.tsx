@@ -27,6 +27,7 @@ export default function Home() {
           <div className="bg-red-950/80 rounded-2xl p-6 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-red-900/80 transition-all duration-300 cursor-pointer h-full min-h-[200px]">
             <span className="text-5xl font-bold text-white">U</span>
             <span className="text-lg text-gray-200 mt-2">UREPP</span>
+            <span className="text-sm text-gray-400 mt-1">Sports Technology</span>
           </div>
         </a>
 
