@@ -11,10 +11,9 @@ export default function Home() {
       </div>
 
       {/* Title */}
-      <h1 className="text-4xl md:text-5xl font-bold text-white text-center mt-4 mb-2">
+      <h1 className="text-4xl md:text-5xl font-bold text-white text-center mt-4 mb-10">
         Alexander Enright Companies
       </h1>
-      <p className="text-xl text-gray-300 text-center mb-10">You get one life</p>
 
       {/* Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
