@@ -16,7 +16,7 @@ export default function Home() {
       </h1>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
         {/* Card 1 - UREPP */}
         <a
           href="https://urepp.vercel.app"
@@ -56,6 +56,20 @@ export default function Home() {
             <span className="text-5xl font-bold text-white">E</span>
             <span className="text-lg text-gray-200 mt-2">Echo</span>
             <span className="text-sm text-gray-400 mt-1">Social Automation</span>
+          </div>
+        </a>
+
+        {/* Card 4 - Dream */}
+        <a
+          href="https://dream-silk.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group"
+        >
+          <div className="bg-red-950/80 rounded-2xl p-6 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-red-900/80 transition-all duration-300 cursor-pointer h-full min-h-[200px]">
+            <span className="text-5xl font-bold text-white">D</span>
+            <span className="text-lg text-gray-200 mt-2">Dream</span>
+            <span className="text-sm text-gray-400 mt-1">Networking Platform</span>
           </div>
         </a>
       </div>
