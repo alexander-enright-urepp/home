@@ -25,8 +25,12 @@ export default function Home() {
           className="group"
         >
           <div className="bg-red-950/80 rounded-2xl p-6 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-red-900/80 transition-all duration-300 cursor-pointer h-full min-h-[200px]">
-            <span className="text-5xl font-bold text-white">U</span>
-            <span className="text-lg text-gray-200 mt-2">UREPP</span>
+            <img
+              src="/urepp-logo.png"
+              alt="UREPP"
+              className="h-16 w-auto object-contain mb-2"
+            />
+            <span className="text-lg text-gray-200">UREPP</span>
             <span className="text-sm text-gray-400 mt-1">Sports Technology</span>
           </div>
         </a>
@@ -39,8 +43,12 @@ export default function Home() {
           className="group"
         >
           <div className="bg-red-950/80 rounded-2xl p-6 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-red-900/80 transition-all duration-300 cursor-pointer h-full min-h-[200px]">
-            <span className="text-5xl font-bold text-white">F</span>
-            <span className="text-lg text-gray-200 mt-2">Franks Angels</span>
+            <img
+              src="/fa-logo.png"
+              alt="Franks Angels"
+              className="h-16 w-auto object-contain mb-2"
+            />
+            <span className="text-lg text-gray-200">Franks Angels</span>
             <span className="text-sm text-gray-400 mt-1">Non Profit</span>
           </div>
         </a>
