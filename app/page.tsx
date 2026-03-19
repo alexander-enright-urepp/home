@@ -11,9 +11,10 @@ export default function Home() {
       </div>
 
       {/* Title */}
-      <h1 className="text-4xl md:text-5xl font-bold text-white text-center mt-4 mb-10">
+      <h1 className="text-4xl md:text-5xl font-bold text-white text-center mt-4 mb-2">
         Alexander Enright Companies
       </h1>
+      <p className="text-xl text-gray-300 text-center mb-10">You get one life</p>
 
       {/* Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
@@ -41,6 +42,7 @@ export default function Home() {
           <div className="bg-red-950/80 rounded-2xl p-6 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-red-900/80 transition-all duration-300 cursor-pointer h-full min-h-[200px]">
             <span className="text-5xl font-bold text-white">F</span>
             <span className="text-lg text-gray-200 mt-2">Franks Angels</span>
+            <span className="text-sm text-gray-400 mt-1">Non Profit</span>
           </div>
         </a>
 
@@ -54,6 +56,7 @@ export default function Home() {
           <div className="bg-red-950/80 rounded-2xl p-6 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-red-900/80 transition-all duration-300 cursor-pointer h-full min-h-[200px]">
             <span className="text-5xl font-bold text-white">E</span>
             <span className="text-lg text-gray-200 mt-2">Echo</span>
+            <span className="text-sm text-gray-400 mt-1">Social Automation</span>
           </div>
         </a>
       </div>
