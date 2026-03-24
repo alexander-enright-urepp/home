@@ -1,4 +1,48 @@
+'use client'
+
+import { useEffect } from 'react'
+
+// Track page view
+async function trackPageView() {
+  try {
+    await fetch('/api/track-view', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        page_path: window.location.pathname,
+        referrer: document.referrer,
+        user_agent: navigator.userAgent,
+      }),
+    })
+  } catch (error) {
+    console.error('Failed to track page view:', error)
+  }
+}
+
+// Track project click
+async function trackProjectClick(projectName: string) {
+  try {
+    await fetch('/api/track-click', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        project_name: projectName,
+      }),
+    })
+  } catch (error) {
+    console.error('Failed to track click:', error)
+  }
+}
+
 export default function Home() {
+  useEffect(() => {
+    trackPageView()
+  }, [])
+
+  const handleProjectClick = (projectName: string) => {
+    trackProjectClick(projectName)
+  }
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-red-900 via-red-800 to-black flex flex-col items-center justify-center px-4 py-12">
       {/* Logo */}
@@ -11,18 +55,22 @@ export default function Home() {
       </div>
 
       {/* Title */}
-      <h1 className="text-4xl md:text-5xl font-bold text-white text-center mt-4 mb-10">
+      <h1 className="text-4xl md:text-5xl font-bold text-white text-center mt-4 mb-2">
         Alexander Enright Companies
       </h1>
+      <p className="text-lg text-gray-300 text-center mb-10">
+        Bachelor's of Science in Communications - Arizona State University '13
+      </p>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 w-full max-w-7xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 w-full max-w-7xl">
         {/* Card 1 - UREPP */}
         <a
           href="https://urepp.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
           className="group"
+          onClick={() => handleProjectClick('UREPP')}
         >
           <div className="bg-red-950/80 rounded-2xl p-6 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-red-900/80 transition-all duration-300 cursor-pointer h-full min-h-[200px]">
             <img
@@ -41,6 +89,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
           className="group"
+          onClick={() => handleProjectClick('Franks Angels')}
         >
           <div className="bg-red-950/80 rounded-2xl p-6 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-red-900/80 transition-all duration-300 cursor-pointer h-full min-h-[200px]">
             <img
@@ -59,6 +108,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
           className="group"
+          onClick={() => handleProjectClick('Echo')}
         >
           <div className="bg-red-950/80 rounded-2xl p-6 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-red-900/80 transition-all duration-300 cursor-pointer h-full min-h-[200px]">
             <span className="text-5xl font-bold text-white">E</span>
@@ -73,6 +123,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
           className="group"
+          onClick={() => handleProjectClick('Dream')}
         >
           <div className="bg-red-950/80 rounded-2xl p-6 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-red-900/80 transition-all duration-300 cursor-pointer h-full min-h-[200px]">
             <span className="text-5xl font-bold text-white">D</span>
@@ -87,11 +138,27 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
           className="group"
+          onClick={() => handleProjectClick('Ping')}
         >
           <div className="bg-red-950/80 rounded-2xl p-6 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-red-900/80 transition-all duration-300 cursor-pointer h-full min-h-[200px]">
             <span className="text-5xl font-bold text-white">P</span>
             <span className="text-lg text-gray-200 mt-2">Ping</span>
             <span className="text-sm text-gray-400 mt-1">Personal CRM</span>
+          </div>
+        </a>
+
+        {/* Card 6 - Home */}
+        <a
+          href="https://home-app-seven-rho.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group"
+          onClick={() => handleProjectClick('Home')}
+        >
+          <div className="bg-red-950/80 rounded-2xl p-6 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-red-900/80 transition-all duration-300 cursor-pointer h-full min-h-[200px]">
+            <span className="text-5xl font-bold text-white">H</span>
+            <span className="text-lg text-gray-200 mt-2">Home</span>
+            <span className="text-sm text-gray-400 mt-1">Links for All</span>
           </div>
         </a>
       </div>
