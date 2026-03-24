@@ -59,7 +59,7 @@ export default function Home() {
         Alexander Enright Companies
       </h1>
       <p className="text-lg text-gray-300 text-center mb-10">
-        Bachelor's of Science in Communications - Arizona State University '13
+        Bachelor of Science in Communications - Arizona State University '13
       </p>
 
       {/* Cards Grid */}
